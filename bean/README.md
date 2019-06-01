@@ -1,0 +1,15 @@
+# bean
+
+### Spring中，有如下接口
+```text
+org.springframework.beans.factory.config.DestructionAwareBeanPostProcessor
+org.springframework.beans.factory.support.MergedBeanDefinitionPostProcessor
+org.springframework.beans.factory.config.SmartInstantiationAwareBeanPostProcessor
+org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor
+```
+
+`InstantiationAwareBeanPostProcessor`、`DestructionAwareBeanPostProcessor`这两个分别是Bean在初始化和销毁之前的回调方法
+
+`SmartInstantiationAwareBeanPostProcessor`这个相当于`InstantiationAwareBeanPostProcessor`的扩展版本，增加了一个对Bean类型预测的回调，但这个主要是Spring框架内部用的，用户还是用`InstantiationAwareBeanPostProcessor`即可
+
+`MergedBeanDefinitionPostProcessor`则是在合并处理Bean定义的时候的回调。这个东东按我的理解也基本是框架内部使用的，用户不用管
