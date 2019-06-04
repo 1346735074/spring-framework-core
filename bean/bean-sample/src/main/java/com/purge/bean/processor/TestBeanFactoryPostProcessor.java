@@ -1,4 +1,4 @@
-package com.purge.demo.processor;
+package com.purge.bean.processor;
 
 import com.purge.demo.entity.Company;
 import lombok.extern.slf4j.Slf4j;

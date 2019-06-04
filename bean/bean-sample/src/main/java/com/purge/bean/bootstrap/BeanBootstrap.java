@@ -1,4 +1,4 @@
-package com.purge.demo.bootstart;
+package com.purge.bean.bootstrap;
 
 import com.purge.demo.entity.Company;
 import com.purge.demo.entity.User;
@@ -13,12 +13,12 @@ import org.springframework.context.annotation.ComponentScan;
  * @since 1.0
  */
 @Slf4j
-@ComponentScan("com.purge.demo")
+@ComponentScan("com.purge.bean")
 @SpringBootApplication
-public class BeanBootstart {
+public class BeanBootstrap {
 
     public static void main(String[] args) {
-        ConfigurableApplicationContext context = SpringApplication.run(BeanBootstart.class, args);
+        ConfigurableApplicationContext context = SpringApplication.run(BeanBootstrap.class, args);
         User user = context.getBean(User.class);
         log.info(user.toString());
 
